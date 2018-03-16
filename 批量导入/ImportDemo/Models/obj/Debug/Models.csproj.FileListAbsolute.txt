@@ -1,0 +1,6 @@
+C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\Models.dll
+C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\Models.pdb
+C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.dll
+C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.pdb

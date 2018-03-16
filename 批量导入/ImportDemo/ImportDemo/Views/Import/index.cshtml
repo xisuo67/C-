@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>导入导出demo</title>
+    <link href="~/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/CSS/bootstrap.min14ed.css" rel="stylesheet" />
+    <link href="~/CSS/jqgrid/ui.jqgrid.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+
+        <table id="ListTable"></table>
+    </div>
+    <script src="~/Script/jquery.min.js"></script>
+    <script src="~/Script/jqgrid/jquery.jqGrid.min.js"></script>
+    <script src="~/Script/jqgrid/i18n/grid.locale-cn.js"></script>
+    <script src="~/Script/bootstrap.min.js"></script>
+    <script src="~/Script/layer/layer.min.js"></script>
+    <script src="~/Script/layer/laydate/laydate.js"></script>
+    <script src="~/Script/import.js"></script>
+    <script type="text/javascript">
+        ImportFunction.init();
+    </script>
+</body>
+</html>

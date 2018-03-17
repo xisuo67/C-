@@ -4,3 +4,12 @@ C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Mode
 C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.dll
 C:\Users\56362\Documents\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.pdb
+D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\Models.dll
+D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\Models.pdb
+D:\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.dll
+D:\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.pdb
+D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\NPOI.dll
+D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\Ionic.Zip.dll
+D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\NPOI.xml

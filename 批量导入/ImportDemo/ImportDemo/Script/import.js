@@ -1,15 +1,15 @@
 ﻿ImportFunction = (function () {
     bindEvent = function () {
         //批量导出
-        $("#btn_Export").on("click", function () {
-            debugger
+        $("#btn_Export").click( function () {
+            alert(2)
             Export("学生信息");
         });
         //批量导入
         $("#btn_Import_Template").on("click", function () {
-
+            alert(1)
         });
-    },
+    };
     ExportMore = function (param) {
         debugger
         if (param) {
@@ -35,7 +35,7 @@
             var guid = UUID();//生成Guid,服务端以此跟踪进度
             ExportXLS(options, guid);
         }
-    },
+    };
     UUID = function () {
         var s = [], itoh = '0123456789ABCDEF'.split('');
         for (var i = 0; i < 36; i++) s[i] = Math.floor(Math.random() * 0x10);
@@ -44,14 +44,14 @@
         for (var i = 0; i < 36; i++) s[i] = itoh[s[i]];
         s[8] = s[13] = s[18] = s[23] = '-';
         return s.join('');
-    },
+    };
     Export = function (fileName, data, url) {
         this.ExportMore({
             FileName: fileName,
             Data: data,
             url: url
         });
-    },
+    };
     ExportXLS= function (options, guid) {
         if (options.columnInfos && options.columnInfos.length > 0) {
             if ($("#excelForm").length == 0) {
@@ -106,7 +106,7 @@
             excelForm.action = options.url;
             excelForm.submit();
         }
-    },
+    };
     initData = function () {
         $.ajax({
             type: "post",
@@ -120,7 +120,7 @@
                 }
             }
         });
-    },
+    };
     initTable = function (studentsInfo) {
         var vm = new Vue({
             el: '#app',
@@ -131,8 +131,8 @@
     };
     return {
         init: function () {
-            initData();
             bindEvent();
+            initData();
         }
     }
 })();

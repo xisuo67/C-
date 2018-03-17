@@ -195,6 +195,7 @@
     <Content Include="Script\jqgrid\i18n\grid.locale-cn.js" />
     <Content Include="Script\jqgrid\jquery.combogrid.js" />
     <Content Include="Script\jqgrid\jquery.jqGrid.min.js" />
+    <Content Include="Script\jquery-3.2.1.min.js" />
     <Content Include="Script\jquery.min.js" />
     <Content Include="Script\layer\extend\layer.ext.js" />
     <Content Include="Script\layer\laydate\laydate.js" />

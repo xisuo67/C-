@@ -38,6 +38,7 @@
       <HintPath>..\..\..\..\..\公司项目\trunk\03Source\01code\Citms.IntegratedManagementServer\packages\NPOI.1.2.5\lib\net40\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +55,9 @@
     <Compile Include="QueryCondition.cs" />
     <Compile Include="Students.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Util\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

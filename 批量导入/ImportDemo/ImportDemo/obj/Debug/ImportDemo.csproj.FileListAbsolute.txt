@@ -68,9 +68,8 @@ D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\ICSharpCode.SharpZipLib.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\itextsharp.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\ChnCharInfo.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\DocX.dll
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Net.Http.Formatting.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Ionic.Zip.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\NPOI.xml
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\itextsharp.xml
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Net.Http.Formatting.xml
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Utility.dll
+D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Utility.pdb

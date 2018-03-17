@@ -52,6 +52,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\个人博客\PersonalBlog\PersonalBlog\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -338,6 +339,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Template\Excel\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
@@ -347,6 +349,10 @@
     <ProjectReference Include="..\Tools\Tools.csproj">
       <Project>{0bac9935-b0fa-4a70-b285-c820dce4e4fd}</Project>
       <Name>Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{ca695780-ff1e-49ea-92be-308803584f0e}</Project>
+      <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

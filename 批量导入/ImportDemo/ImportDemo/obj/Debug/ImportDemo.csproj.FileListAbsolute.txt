@@ -47,7 +47,6 @@ D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Tools.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Models.pdb
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Tools.pdb
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Newtonsoft.Json.xml
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Web.Razor.xml
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Web.Webpages.xml
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Web.Webpages.Deployment.xml

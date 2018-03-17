@@ -49,10 +49,14 @@ namespace ImportDemo.Controllers
             }
             return Json(apiResult);
         }
-        public ActionResult Export()
+        public ActionResult Export(string excelParam)
         {
-            string excelParam = "";
             ExcelInfo info = JsonConvert.DeserializeObject<ExcelInfo>(excelParam);
+            if (info.Data==null)
+            {
+                string sql = "select * from students";
+                info.Data = DBHelper.GetDataTable(sql);
+            }
             string fileExt = info.GetFileExt();
             if (string.IsNullOrEmpty(info.FileName))
             {
@@ -68,11 +72,11 @@ namespace ImportDemo.Controllers
             //mimeType
             string mineType = MimeHelper.GetMineType(info.FileName);
 
-            if (!info.IsExportSelectData)
-            {
-                //设置最大导出条数
-                info.Condition.PageSize = 9999;
-            }
+            //if (!info.IsExportSelectData)
+            //{
+            //    //设置最大导出条数
+            //    info.Condition.PageSize = 9999;
+            //}
             string token = string.Empty;
             //if (!info.IsExportSelectData)
             //{

@@ -2,7 +2,6 @@
     bindEvent = function () {
         //批量导出
         $("#btn_Export").click( function () {
-            alert(2)
             Export("学生信息");
         });
         //批量导入
@@ -11,13 +10,16 @@
         });
     };
     ExportMore = function (param) {
-        debugger
         if (param) {
             //var columnInfos = this.getColumnInfo(param.columnFilter);
+            var fileFormat = 0;
+            if (param.FileFormat != null) {
+                fileFormat = param.FileFormat;
+            }
             var options = {
                 //columnInfos: columnInfos,
                 fileName: param.FileName,
-                type: type,
+                type:"post",
                 FileFormat: fileFormat,
                 url: param.url,
                 FixColumns: param.FixColumns,
@@ -27,8 +29,8 @@
             };
             //默认不分页导出数据
             if (!$.isArray(param.Data)) {
-                options.condition = this.getLoadParams();
-                options.api = settings.url;
+                //options.condition = this.getLoadParams();
+                //options.api = settings.url;
             } else {
                 options.data = param.Data;
             }
@@ -52,8 +54,9 @@
             url: url
         });
     };
-    ExportXLS= function (options, guid) {
-        if (options.columnInfos && options.columnInfos.length > 0) {
+    ExportXLS = function (options, guid) {
+        debugger
+
             if ($("#excelForm").length == 0) {
                 $('<form id="excelForm"  method="post" target="excelIFrame"><input type="hidden" name="excelParam" id="excelData" /></form><iframe id="excelIFrame" name="excelIFrame" style="display:none;"></iframe>').appendTo("body");
             }
@@ -61,7 +64,7 @@
                 options.FileFormat = "0";
             }
             if (!options.url) {
-                options.url = "../Excel/GridExport";
+                options.url = "../Import/Export";
             }
             if (options.ColAsSerialize == undefined || options.ColAsSerialize == null) {
                 options.ColAsSerialize = true;
@@ -84,10 +87,6 @@
             //默认不分页导出数据
             if (!$.isArray(options.data)) {
                 //查询条件
-                var queryParam = citms.clone(options.condition);
-                queryParam.page = 1;
-
-                param.Condition = queryParam;
                 param.RootPath = document.location.origin;
                 param.Api = document.location.origin + options.api;
                 param.IsExportSelectData = false;
@@ -105,7 +104,6 @@
 
             excelForm.action = options.url;
             excelForm.submit();
-        }
     };
     initData = function () {
         $.ajax({

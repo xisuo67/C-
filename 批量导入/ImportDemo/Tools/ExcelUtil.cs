@@ -31,7 +31,8 @@ namespace Tools
                 HttpContext.Current.Session[guid] = 0;
             }
             //1.获取列表对应数据
-            DataTable dt = GetGirdData(info, token);
+            //DataTable dt = GetGirdData(info, token);
+            DataTable dt = info.Data;
             if (!string.IsNullOrEmpty(guid))
             {
                 HttpContext.Current.Session[guid] = 30;//查询出结果,直接设置为30%

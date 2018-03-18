@@ -74,7 +74,7 @@
                     '</div>' +
                     '<div class="modal-body">' +
                     '<div id="uploader" class="wu-example">' +
-                    '<p style="font-weight:bold;">导入说明:</p><p class="pt5">导入文件为EXCEL格式，请先下载模板进行必要信息填写，模板下载<a href="javascript:;" onclick="DownloadExcelTemplate(\'{0}\')">请点击这里</a>！</p>'.format(param.type) +
+                    '<p style="font-weight:bold;">导入说明:</p><p class="pt5">导入文件为EXCEL格式，请先下载模板进行必要信息填写，模板下载<a href="javascript:;" onclick="$.DownloadExcelTemplate(\'{0}\')">请点击这里</a>！</p>'.format(param.type) +
                     '<div id="thelist" class="uploader-list"></div>' +
                     '<div class="uploader-wrap clearfix pb20">' +
                     '<input type="text" readonly class="form-control input-sm mr5 upload-file-name" style="width:300px;" />' +
@@ -324,6 +324,8 @@ jQuery.extend(String.prototype,{
         }
         return result;
     },
+});
+jQuery.extend({
     myParam: function (a, traditional) {
         var prefix, s = [], rbracket = /\[\]$/,
             add = function (key, value) {
@@ -396,9 +398,6 @@ jQuery.extend(String.prototype,{
             return;
         }
         var param = { type: type };
-        if ($.isFunction(Permission.GetFuncitonCode)) {
-            param.FunctionCode = Permission.GetFuncitonCode();
-        }
         $.download("../Import/DownLoadTemplate", param, "get");
     }
 });

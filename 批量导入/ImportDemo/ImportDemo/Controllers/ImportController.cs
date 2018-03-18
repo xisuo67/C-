@@ -12,6 +12,8 @@ using Utility;
 
 namespace ImportDemo.Controllers
 {
+    [Export]
+    [PartCreationPolicy(CreationPolicy.Shared)]
     public class ImportController : Controller
     {
         /// <summary>

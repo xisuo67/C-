@@ -50,7 +50,7 @@
             if (param.type != "undefined") {
                 //加载样式和js文件
                 loadFile("../CSS/webuploader/webuploader.css");
-                loadFile("./webuploader/webuploader.min.js");
+                loadFile("../Script/webuploader/webuploader.min.js");
                 if (!WebUploader.Uploader.support()) {
                     var error = "上传控件不支持您的浏览器！请尝试升级flash版本或者使用Chrome引擎的浏览器";
                     if (window.console) {

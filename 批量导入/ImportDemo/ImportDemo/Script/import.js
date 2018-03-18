@@ -7,7 +7,7 @@
         //批量导入
         $("#btn_Import_Template").on("click", function () {
             ImportExcelTemplate({
-                type: "FrontendDevice", after: function () {
+                type: "StudentsInfo", after: function () {
                     initData();
                 }
             });
@@ -74,7 +74,7 @@
                     '</div>' +
                     '<div class="modal-body">' +
                     '<div id="uploader" class="wu-example">' +
-                    '<p style="font-weight:bold;">导入说明:</p><p class="pt5">导入文件为EXCEL格式，请先下载模板进行必要信息填写，模板下载<a href="javascript:;" onclick="$.DownloadExcelTemplate(\'{0}\')">请点击这里</a>！</p>'.format(param.type) +
+                    '<p style="font-weight:bold;">导入说明:</p><p class="pt5">导入文件为EXCEL格式，请先下载模板进行必要信息填写，模板下载<a href="javascript:;" onclick="DownloadExcelTemplate(\'{0}\')">请点击这里</a>！</p>'.format(param.type) +
                     '<div id="thelist" class="uploader-list"></div>' +
                     '<div class="uploader-wrap clearfix pb20">' +
                     '<input type="text" readonly class="form-control input-sm mr5 upload-file-name" style="width:300px;" />' +
@@ -324,4 +324,81 @@ jQuery.extend(String.prototype,{
         }
         return result;
     },
+    myParam: function (a, traditional) {
+        var prefix, s = [], rbracket = /\[\]$/,
+            add = function (key, value) {
+                value = jQuery.isFunction(value) ? value() : (value == null ? "" : value);
+                s[s.length] = encodeURIComponent(key) + "=" + encodeURIComponent(value);
+            },
+            buildParams = function (prefix, obj, traditional, add) {
+                var name;
+                if (jQuery.isArray(obj)) {
+                    jQuery.each(obj, function (i, v) {
+                        if (traditional || rbracket.test(prefix)) {
+                            add(prefix, v);
+                        } else {
+                            // Item is non-scalar (array or object), encode its numeric index.
+                            buildParams(prefix + "[" + (typeof v === "object" ? i : "") + "]", v, traditional, add);
+                        }
+                    });
+
+                } else if (!traditional && jQuery.type(obj) === "object") {
+                    // Serialize object item.
+                    for (name in obj) {
+                        buildParams(prefix + "[" + name + "]", obj[name], traditional, add);
+                    }
+
+                } else {
+                    // Serialize scalar item.
+                    add(prefix, obj);
+                }
+            };
+
+        if (traditional === undefined) {
+            traditional = jQuery.ajaxSettings && jQuery.ajaxSettings.traditional;
+        }
+
+        if (jQuery.isArray(a) || (a.jquery && !jQuery.isPlainObject(a))) {
+            // Serialize the form elements
+            jQuery.each(a, function () {
+                add(this.name, this.value);
+            });
+
+        } else {
+            for (prefix in a) {
+                buildParams(prefix, a[prefix], traditional, add);
+            }
+        }
+
+        // Return the resulting serialization
+        return s.join("&");
+    },
+    download: function (url, data, method) {
+        if (url && data) {
+            method = method || 'post';
+            data = typeof (data) == "string" ? data : decodeURIComponent($.myParam(data));
+            var inputs = '';
+            $.each(data.split('&'), function () {
+                var pair = this.split('=');
+                inputs += '<input type="hidden"   name="{0}" value="{1}"/>'.format(pair[0], pair[1]);
+            });
+            var objForm = $("#fileForm");
+            if (objForm.length == 0) {
+                objForm = $('<form id="fileForm" method="{0}" target="fileIFrame" action="{1}">{2}</form><iframe id="fileIFrame" name="fileIFrame" style="display:none;"></iframe>'.format(method, url, inputs)).appendTo('body');
+            } else {
+                objForm.attr("method", method).attr("action", url).html(inputs);
+            }
+            objForm.submit();
+        }
+    },
+    DownloadExcelTemplate: function (type) {
+        if (type == "undefined") {
+            return;
+        }
+        var param = { type: type };
+        if ($.isFunction(Permission.GetFuncitonCode)) {
+            param.FunctionCode = Permission.GetFuncitonCode();
+        }
+        $.download("../Import/DownLoadTemplate", param, "get");
+    }
 });

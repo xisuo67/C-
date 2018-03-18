@@ -63,7 +63,6 @@ D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.csprojResol
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.csproj.CoreCompileInputs.cache
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.pdb
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\NPOI.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\ICSharpCode.SharpZipLib.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\itextsharp.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\ChnCharInfo.dll

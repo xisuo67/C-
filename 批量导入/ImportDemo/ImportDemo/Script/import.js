@@ -49,10 +49,10 @@
             var param = $.extend({}, defaults, options);
             if (param.type != "undefined") {
                 //加载样式和js文件
-                loadFile("/Content/plugins/webuploader/webuploader.css");
-                loadFile("/Scripts/plugins/webuploader/webuploader.min.js");
+                loadFile("../CSS/webuploader/webuploader.css");
+                loadFile("./webuploader/webuploader.min.js");
                 if (!WebUploader.Uploader.support()) {
-                    var error = "上传控件不支持您的浏览器！请尝试升级flash版本或者使用Chrome引擎的浏览器。<a target='_blank' href='/Content/tools/44.0.2403.157_chrome_installer.exe'>下载页面</a>";
+                    var error = "上传控件不支持您的浏览器！请尝试升级flash版本或者使用Chrome引擎的浏览器";
                     if (window.console) {
                         window.console.log(error);
                     }
@@ -89,7 +89,7 @@
                     modal.modal('show');
                     var postData = { type: param.type, FunctionCode: param.FunctionCode, ReturnDetailData: param.ReturnDetailData };
                     var uploader = WebUploader.create({
-                        swf: '/Scripts/plugins/webuploader/Uploader.swf',
+                        swf: '../Scripts/plugins/webuploader/Uploader.swf',
                         server: '../Import/ImportTemplate?' + $.param(postData),
                         pick: '#' + pickerId,
                         accept: {

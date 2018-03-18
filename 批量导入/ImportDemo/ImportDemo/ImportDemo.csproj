@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\bootstrap.min14ed.css" />
+    <Content Include="CSS\webuploader\webuploader.css" />
     <Content Include="Global.asax" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\import.js" />
@@ -129,6 +130,22 @@
     <Content Include="Script\layer\skin\moon\default1.png" />
     <Content Include="Script\layer\skin\moon\style.css" />
     <Content Include="Script\vue.min.js" />
+    <Content Include="Script\webuploader\Uploader.swf" />
+    <Content Include="Script\webuploader\webuploader.custom.js" />
+    <Content Include="Script\webuploader\webuploader.custom.min.js" />
+    <Content Include="Script\webuploader\webuploader.fis.js" />
+    <Content Include="Script\webuploader\webuploader.flashonly.js" />
+    <Content Include="Script\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Script\webuploader\webuploader.html5only.js" />
+    <Content Include="Script\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Script\webuploader\webuploader.js" />
+    <Content Include="Script\webuploader\webuploader.min.js" />
+    <Content Include="Script\webuploader\webuploader.noimage.js" />
+    <Content Include="Script\webuploader\webuploader.noimage.min.js" />
+    <Content Include="Script\webuploader\webuploader.nolog.js" />
+    <Content Include="Script\webuploader\webuploader.nolog.min.js" />
+    <Content Include="Script\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Script\webuploader\webuploader.withoutimage.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

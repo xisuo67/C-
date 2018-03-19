@@ -167,5 +167,19 @@ namespace Tools
             return table;
         }
 
+        /// <summary>
+        /// 保存方法
+        /// </summary>
+        /// <param name="strSQL">插入数据表查询SQL</param>
+        /// <param name="dt">数据集</param>
+        public static void MultiInsert(string strSQL, DataTable dt)
+        {
+            SqlCommand cmd = new SqlCommand(strSQL, DBHelper.Conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            da.InsertCommand= cb.GetInsertCommand(true);
+            da.Update(dt);
+        }
+
     }
 }

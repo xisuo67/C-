@@ -8,7 +8,7 @@
         $("#btn_Import_Template").on("click", function () {
             ImportExcelTemplate({
                 type: "StudentsInfo", after: function () {
-                    initData();
+                    location.reload();
                 }
             });
         });
@@ -265,6 +265,7 @@
             excelForm.submit();
     };
     initData = function () {
+        debugger
         $.ajax({
             type: "post",
             url: "../Import/Query",

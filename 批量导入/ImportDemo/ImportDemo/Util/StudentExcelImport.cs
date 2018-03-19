@@ -189,8 +189,41 @@ namespace ImportDemo.Util
         /// <returns></returns>
         public override object SaveImportData(DataTable dt, Dictionary<string, object> extraInfo)
         {
+            string columnName = string.Empty;
+            object objExtra = null;
+            Dictionary<string, string> dict = null;
+            object objCellValue = null;
+            foreach (DataRow dr in dt.Rows)
+            {
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    columnName = dc.ColumnName;
+                    if (extraInfo.TryGetValue(columnName, out objExtra))
+                    {
+                        dict = objExtra as Dictionary<string, string>;
+                        if (dict != null)
+                        {
+                            objCellValue = dr[columnName];
+                            if (!ExcelImportHelper.ObjectIsNullOrEmpty(objCellValue))
+                            {
+                                dr[columnName] = dict[objCellValue.ToString()];
+                            }
+                        }
+                    }
+                }
 
-            throw new System.NotImplementedException();
+            }
+            string strSQL = string.Format("SELECT {0} FROM Students", string.Join(",", GetColumnList(dt)));
+            try
+            {
+
+                return dt;
+            }
+            catch (System.Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
     #endregion

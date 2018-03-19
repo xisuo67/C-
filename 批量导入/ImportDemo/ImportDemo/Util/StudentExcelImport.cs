@@ -87,7 +87,7 @@ namespace ImportDemo.Util
             {
                 if (!string.IsNullOrEmpty(e.CellValue.ToString().Trim()))
                 {
-                    if (!System.Text.RegularExpressions.Regex.IsMatch(e.CellValue.ToString(), @"^[0-9]*[1-9][0- ]*$"))
+                    if (!System.Text.RegularExpressions.Regex.IsMatch(e.CellValue.ToString(), @"^-?\d+$"))
                     {
                         result += "请输入正确年龄!";
                     }
@@ -189,6 +189,7 @@ namespace ImportDemo.Util
         /// <returns></returns>
         public override object SaveImportData(DataTable dt, Dictionary<string, object> extraInfo)
         {
+
             throw new System.NotImplementedException();
         }
     }

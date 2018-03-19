@@ -22,7 +22,7 @@ namespace ImportDemo.Util
         {
             new ImportVerify{ ColumnName= "学生编号",FieldName="SNO",VerifyFunc =UniqueVerify },
             new ImportVerify{ ColumnName= "学生姓名",FieldName="SNAME",VerifyFunc =(e,extra)=> ExcelImportHelper.GetCellMsg(e.CellValue,e.ColName,50,true,true) },
-            new ImportVerify{ ColumnName= "年龄",FieldName="AGE",VerifyFunc =(e,extra)=> ExcelImportHelper.GetCellMsg(e.CellValue,e.ColName,50,true,false)  },
+            new ImportVerify{ ColumnName= "年龄",FieldName="AGE",VerifyFunc =VerifyNum},
             new ImportVerify{ ColumnName= "性别",FieldName="SEX",VerifyFunc =SelectVerify },
         }.ToDictionary(e => e.ColumnName, e => e);
         /// <summary>
@@ -73,7 +73,28 @@ namespace ImportDemo.Util
             }
             return result;
         }
-
+        /// <summary>
+        /// 年龄验证
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="extra"></param>
+        /// <returns></returns>
+        private static string VerifyNum(ImportVerifyParam e, object extra)
+        {
+            string result = "";
+            result = ExcelImportHelper.GetCellMsg(e.CellValue, e.ColName, 100, false, false);
+            if (string.IsNullOrEmpty(result))
+            {
+                if (!string.IsNullOrEmpty(e.CellValue.ToString().Trim()))
+                {
+                    if (!System.Text.RegularExpressions.Regex.IsMatch(e.CellValue.ToString(), @"^[0-9]*[1-9][0- ]*$"))
+                    {
+                        result += "请输入正确年龄!";
+                    }
+                }
+            }
+            return result;
+        }
         /// <summary>
         /// 学生编号数量缓存
         /// </summary>
@@ -124,6 +145,34 @@ namespace ImportDemo.Util
             sheet.Workbook.Write(s);
         }
         #region "override方法"
+        /// <summary>
+        /// 获取额外的校验所需信息
+        /// </summary>
+        /// <param name="listColumn">所有列名集合</param>
+        /// <param name="dt">dt</param>
+        /// <returns>额外信息</returns>
+        /// <remarks>
+        /// 例如导入excel中含有下拉框 导入时需要判断选项值是否还存在，可以通过该方法查询选项值
+        /// </remarks>
+        public override Dictionary<string, object> GetExtraInfo(List<string> listColumn, DataTable dt)
+        {
+            Dictionary<string, object> extraInfo = new Dictionary<string, object>();
+            foreach (string name in listColumn)
+            {
+                switch (name)
+                {
+                    case "SNO":
+                        extraInfo[name] = GetStudentNoDict(dt);
+                        break;
+                    case "SEX":
+                        extraInfo[name] = GetSexDict();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return extraInfo;
+        }
         /// <summary>
         /// 业务类型
         /// </summary>

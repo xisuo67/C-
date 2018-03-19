@@ -101,7 +101,7 @@ namespace ImportDemo.Util
         private static Dictionary<string, int> GetStudentNoDict(DataTable dt)
         {
             //人员编号 数量缓存
-            string sql = "select sno from students";
+            string sql = "select * from students";
             List<string> listNo = DBHelper.GetDataTable(sql).ToList<Students>().Select(e => e.SNO).ToList() ;
             var q = (from p in dt.AsEnumerable()
                      where !string.IsNullOrEmpty(p.Field<string>("sno"))

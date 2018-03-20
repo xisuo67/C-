@@ -265,7 +265,6 @@
             excelForm.submit();
     };
     initData = function () {
-        debugger
         $.ajax({
             type: "post",
             url: "../Import/Query",
@@ -356,11 +355,9 @@ jQuery.extend({
                     add(prefix, obj);
                 }
             };
-
         if (traditional === undefined) {
             traditional = jQuery.ajaxSettings && jQuery.ajaxSettings.traditional;
         }
-
         if (jQuery.isArray(a) || (a.jquery && !jQuery.isPlainObject(a))) {
             // Serialize the form elements
             jQuery.each(a, function () {
@@ -372,8 +369,6 @@ jQuery.extend({
                 buildParams(prefix, a[prefix], traditional, add);
             }
         }
-
-        // Return the resulting serialization
         return s.join("&");
     },
     download: function (url, data, method) {

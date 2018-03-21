@@ -14,3 +14,10 @@ D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\NPOI.dll
 D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\Ionic.Zip.dll
 D:\GitHub\C-\批量导入\ImportDemo\Models\bin\Debug\NPOI.xml
 D:\GitHub\C-\批量导入\ImportDemo\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+G:\test\C-\批量导入\ImportDemo\Models\bin\Debug\Models.dll
+G:\test\C-\批量导入\ImportDemo\Models\bin\Debug\Models.pdb
+G:\test\C-\批量导入\ImportDemo\Models\bin\Debug\Newtonsoft.Json.dll
+G:\test\C-\批量导入\ImportDemo\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+G:\test\C-\批量导入\ImportDemo\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+G:\test\C-\批量导入\ImportDemo\Models\obj\Debug\Models.dll
+G:\test\C-\批量导入\ImportDemo\Models\obj\Debug\Models.pdb

@@ -170,6 +170,7 @@
     <Content Include="Script\webuploader\webuploader.nolog.min.js" />
     <Content Include="Script\webuploader\webuploader.withoutimage.js" />
     <Content Include="Script\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="sql文件\测试数据库及表.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

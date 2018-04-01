@@ -67,17 +67,12 @@ D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\ICSharpCode.SharpZipLib.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\itextsharp.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\ChnCharInfo.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\DocX.dll
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Ionic.Zip.dll
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\NPOI.xml
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\itextsharp.xml
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Utility.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Utility.pdb
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Web.Http.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Web.Http.xml
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\zh-Hans\System.Web.Http.resources.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Web.Http.WebHost.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Web.Http.WebHost.xml
-D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Net.Http.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Net.Http.Extensions.dll
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Net.Http.Formatting.dll
@@ -137,3 +132,5 @@ G:\test\C-\批量导入\ImportDemo\ImportDemo\bin\zh-Hans\System.Web.Helpers.res
 G:\test\C-\批量导入\ImportDemo\ImportDemo\bin\zh-Hans\System.Web.Mvc.resources.dll
 G:\test\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.dll
 G:\test\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.pdb
+D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Newtonsoft.Json.xml
+D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Net.Http.Formatting.xml

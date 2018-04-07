@@ -134,3 +134,4 @@ G:\test\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.dll
 G:\test\C-\批量导入\ImportDemo\ImportDemo\obj\Debug\ImportDemo.pdb
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\Newtonsoft.Json.xml
 D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\System.Net.Http.Formatting.xml
+D:\GitHub\C-\批量导入\ImportDemo\ImportDemo\bin\itextsharp.xml

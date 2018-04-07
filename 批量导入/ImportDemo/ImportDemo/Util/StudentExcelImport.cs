@@ -137,7 +137,7 @@ namespace ImportDemo.Util
         /// <param name="s">响应流</param>
         public override void GetExportTemplate(string FilePath, Stream s)
         {
-            //写入下拉框值 人员类型 所属单位 警衔
+            //写入下拉框值 
             var sheet = NPOIHelper.GetFirstSheet(FilePath);
             int dataRowIndex = StartRowIndex + 1;
             string[] sex = GetSexDict().Keys.ToArray();

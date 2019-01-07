@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{CA695780-FF1E-49EA-92BE-308803584F0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileExportHelper", "FileExportHelper\FileExportHelper.csproj", "{A916F8D8-C1D7-4EEB-99BD-7C75E77F0792}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CA695780-FF1E-49EA-92BE-308803584F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA695780-FF1E-49EA-92BE-308803584F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA695780-FF1E-49EA-92BE-308803584F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A916F8D8-C1D7-4EEB-99BD-7C75E77F0792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A916F8D8-C1D7-4EEB-99BD-7C75E77F0792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A916F8D8-C1D7-4EEB-99BD-7C75E77F0792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A916F8D8-C1D7-4EEB-99BD-7C75E77F0792}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
